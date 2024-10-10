@@ -44,7 +44,7 @@
    Abra seu terminal e execute o seguinte comando para clonar o repositório:
 
    ```bash
-   git clone https://seu-repositorio.git
+   git clone https://github.com/beatrizgdc/projectSquads.git
    ```
 
 2. **Entre na pasta do projeto**  
