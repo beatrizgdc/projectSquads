@@ -1,5 +1,4 @@
 // Definição dos modelos Mongoose
-
 const mongoose = require('mongoose');
 
 // Definição do esquema (schema) do usuário

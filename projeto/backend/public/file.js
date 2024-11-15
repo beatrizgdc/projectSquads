@@ -1,16 +1,17 @@
 // Arquivos estático
-
 const express = require('express');
-const connectDB = require('./config/db');
-const userRoutes = require('./routes/user');
+const connectDB = require('../config/db.js');
+const dotenv = require('dotenv')
+const userRoutes = require('../routes/route.js');
 
+dotenv.config({path: './MONGO_URI.env'});
 const app = express();
 
 // Middleware para parsing de JSON
 app.use(express.json());
 
 // Usar as rotas de usuário
-app.use('/api/users', userRoutes);
+app.use('/api', userRoutes);
 
 // Conectar ao MongoDB
 connectDB();

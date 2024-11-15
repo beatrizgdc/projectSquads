@@ -1,20 +1,11 @@
 // Conexão ao banco de dados MongoDB
-
+require('dotenv').config({path: './mongoUri.env'});
 const mongoose = require('mongoose');
-
-// URL de conexão com o MongoDB
-const dbURI = 'mongodb+srv://jonnathanvituriano205:<db_password>@cluster0.mksft.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
-
-// Opções de conexão
-const options = {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-};
 
 // Função para conectar ao MongoDB
 const connectDB = async () => {
     try {
-        await mongoose.connect(dbURI, options);
+        await mongoose.connect(process.env.MONGO_URI);
         console.log('Conectado ao MongoDB com sucesso');
     } catch (error) {
         console.error('Erro ao conectar ao MongoDB:', error);
