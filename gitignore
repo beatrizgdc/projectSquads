@@ -1,0 +1,36 @@
+# Node.js dependencies
+/node_modules/
+
+# TypeScript output directory
+/dist/
+
+# Arquivos de configuração do editor
+/.vscode/
+/.idea/
+
+# Arquivos de configuração do sistema operacional (Windows, Mac, etc.)
+.DS_Store
+Thumbs.db
+
+# Arquivos de log
+*.log
+
+# Arquivos temporários
+*.tmp
+*.swp
+*.bak
+
+# Arquivos de banco de dados temporários
+*.sqlite
+*.sqlite3
+
+# Arquivos de configuração do teste (Jest)
+/coverage/
+
+# Arquivos gerados pelo ts-node
+*.tsbuildinfo
+
+# Arquivo do ambiente (se você usar .env, não versionar esse arquivo)
+.env
+.env.local
+.env.*.local
