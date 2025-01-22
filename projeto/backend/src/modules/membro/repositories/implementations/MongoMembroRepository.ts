@@ -13,4 +13,4 @@ export class MongoMembroRepository implements IMembroRepository {
   }
 }
 
-export default MongoMembroRepository; // Garanta que está exportando corretamente
+export default MongoMembroRepository;

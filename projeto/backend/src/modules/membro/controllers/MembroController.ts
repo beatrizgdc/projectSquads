@@ -16,7 +16,7 @@ export const addMembro = async (req: Request, res: Response) => {
       req.body.habilidades,
       req.body.redes_sociais,
       req.body.squad_id,
-      req.body.email // Certifique-se de incluir o campo `email`
+      req.body.email
     );
     const membro = await membroService.addMembro(addMembroDto);
     res.status(201).json(membro);

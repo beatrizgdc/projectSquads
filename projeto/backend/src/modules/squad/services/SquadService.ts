@@ -10,7 +10,7 @@ export class SquadService {
       nome: createSquadDto.nome,
       logo_url: createSquadDto.logo_url,
       descricao: createSquadDto.descricao,
-      data_criacao: new Date(), // Definindo a data de criação aqui
+      data_criacao: new Date(),
       area_atuacao: createSquadDto.area_atuacao,
       status: createSquadDto.status,
     } as ISquad;
@@ -23,7 +23,6 @@ export class SquadService {
     return this.squadRepository.findAll();
   }
 
-  // Método para encontrar todos os squads com seus membros
   async findAllWithMembers(): Promise<ISquad[]> {
     return this.squadRepository.findAllWithMembers();
   }

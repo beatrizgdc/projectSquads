@@ -3,23 +3,23 @@ import swaggerUi from "swagger-ui-express";
 
 const swaggerOptions = {
   definition: {
-    openapi: '3.0.0',
+    openapi: "3.0.0",
     info: {
-      title: 'API com Autenticação JWT',
-      version: '1.0.0',
-      description: 'API protegida com middleware de autenticação JWT',
+      title: "API com Autenticação JWT",
+      version: "1.0.0",
+      description: "API protegida com middleware de autenticação JWT",
     },
     servers: [
       {
-        url: 'http://localhost:3000', // Substitua pelo URL real da API
+        url: "http://localhost:3000",
       },
     ],
     components: {
       securitySchemes: {
         BearerAuth: {
-          type: 'http',
-          scheme: 'bearer',
-          bearerFormat: 'JWT',
+          type: "http",
+          scheme: "bearer",
+          bearerFormat: "JWT",
         },
       },
     },
@@ -29,10 +29,9 @@ const swaggerOptions = {
       },
     ],
   },
-  apis: ['./src/routes/*.ts'], // Certifique-se de que o caminho esteja correto
+  apis: ["./src/routes/*.ts"],
 };
 
-// Geração da documentação Swagger
 const swaggerDocs = swaggerJsdoc(swaggerOptions);
 
 export { swaggerUi, swaggerDocs };

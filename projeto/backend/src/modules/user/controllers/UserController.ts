@@ -12,7 +12,6 @@ export const register = async (req: Request, res: Response) => {
     const { user, token } = await userService.register(createUserDto);
     res.status(201).json({ user, token });
   } catch (error: any) {
-    // Defina o tipo de erro como 'any' para evitar problemas de compilação
     res.status(400).json({ message: error.message });
   }
 };
@@ -25,7 +24,6 @@ export const login = async (req: Request, res: Response) => {
       return res.status(401).json({ message: "Invalid credentials" });
     res.status(200).json(result);
   } catch (error: any) {
-    // Defina o tipo de erro como 'any' para evitar problemas de compilação
     res.status(400).json({ message: error.message });
   }
 };
